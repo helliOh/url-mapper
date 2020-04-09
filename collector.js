@@ -8,7 +8,7 @@ const getHtml = async (root) => {
 };
 
 exports.Init = async (root) =>{
-    console.log(`    Init      ${root}...`);
+    // console.log(`    Init      ${root}...`);
     return new Promise((resolve, reject) =>{
         getHtml(root).then(HTML =>{
             try{
@@ -41,7 +41,7 @@ exports.Init = async (root) =>{
 exports.Collect = async (from, root) =>{
     return new Promise((resolve, reject) =>{
         from = encodeURI(from);
-        console.log(`Collecting    ${decodeURI(from)}...`)
+        // console.log(`Collecting    ${decodeURI(from)}...`)
         
         getHtml(from).then(HTML =>{
             try{

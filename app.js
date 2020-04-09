@@ -2,7 +2,6 @@ const axios = require('axios')
 const cheerio = require('cheerio');
 const fs = require('fs');
 const util = require('util');
-const spawn = require('child_process').spawn
 
 const {Init, Collect} = require('./collector');
 
@@ -22,7 +21,7 @@ async function DFS(link){
         for(i in links) await DFS(links[i]);
     }
     catch(e){
-        console.log('Failed');
+        // console.log('Failed');
     }
 }
 
