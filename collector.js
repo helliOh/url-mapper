@@ -4,13 +4,11 @@ const cheerio = require('cheerio');
 const getHtml = async (root) => {
     try {
       return await axios.get(root);
-    } catch (error) {
-      console.error(error);
-    }
+    } catch (e) {}
 };
 
 exports.Init = async (root) =>{
-    console.log(`   Init     ${root}...`);
+    console.log(`    Init      ${root}...`);
     return new Promise((resolve, reject) =>{
         getHtml(root).then(HTML =>{
             try{
